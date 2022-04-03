@@ -48,4 +48,188 @@ p {
 
 body {
   font-family: 'Montserrat', sans-serif;
+  background-image: url(/dist/images/bg-top.svg);
+  background-repeat: no-repeat;
+  background-position: 12em -2em;
+  font-size: 15px;
+}
+
+header {
+  margin-top: 4.5em;
+  margin-bottom: 4em;
+}
+
+header h1 {
+  text-align: center;
+  font-size: 1.9rem;
+  color: #6d708d;
+  margin-bottom: 1.4em;
+  font-weight: 600;
+}
+
+header .toggle-pricing {
+  color: #b3b5c6;
+  font-size: 1rem;
+  font-weight: 600;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1.5em;
+}
+
+header .switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+header .switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+header .switch .slider {
+  position: absolute;
+  cursor: pointer;
+  inset: 0;
+  background: -webkit-gradient(linear, left top, right top, from(#a3a8f0), to(#696fdd));
+  background: linear-gradient(to right, #a3a8f0, #696fdd);
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+header .switch .slider::before {
+  position: absolute;
+  content: '';
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: #fff;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+header .switch input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+          transform: translateX(26px);
+}
+
+header .switch .slider.round {
+  border-radius: 34px;
+}
+
+header .switch .slider.round:before {
+  border-radius: 50%;
+}
+
+.card {
+  background-color: #fff;
+  -webkit-box-shadow: 0 0.6em 0.8em 0.4em #a3a8f047;
+          box-shadow: 0 0.6em 0.8em 0.4em #a3a8f047;
+  border-radius: 0.6em;
+  margin: 2em 1.75em;
+  padding: 2em 1.9em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.card h2 {
+  color: #6d708d;
+  font-weight: 600;
+  font-size: 1.2rem;
+  margin-bottom: 1.2em;
+}
+
+.card strong {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.35em;
+  margin-bottom: 1em;
+  color: #494c5f;
+}
+
+.card .dollar-sign {
+  font-size: 2.4rem;
+}
+
+.card .price {
+  font-size: 4.4rem;
+}
+
+.card ul {
+  width: 100%;
+  text-align: center;
+  color: #6d708d;
+  font-weight: 600;
+  margin-bottom: 1.4em;
+}
+
+.card ul hr {
+  border: 0.01em solid #b3b5c6;
+  opacity: 0.4;
+}
+
+.card ul li {
+  margin: 1.15em 0;
+}
+
+.card a {
+  width: 100%;
+}
+
+.card button {
+  width: 100%;
+  color: #f6f6fe;
+  background: -webkit-gradient(linear, left top, right top, from(#a3a8f0), to(#696fdd));
+  background: linear-gradient(to right, #a3a8f0, #696fdd);
+  border: none;
+  border-radius: 0.5em;
+  padding: 1em 0em;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  font-size: 0.8rem;
+  font-family: 'Montserrat', sans-serif;
+  cursor: pointer;
+}
+
+.alt-colour {
+  background: -webkit-gradient(linear, left top, left bottom, from(#a3a8f0), to(#696fdd));
+  background: linear-gradient(#a3a8f0, #696fdd);
+}
+
+.alt-colour h2, .alt-colour strong, .alt-colour ul {
+  color: #f6f6fe;
+}
+
+.alt-colour ul hr {
+  border-color: #f6f6fe;
+}
+
+.alt-colour button {
+  color: #696fdd;
+  background: #f6f6fe;
 }

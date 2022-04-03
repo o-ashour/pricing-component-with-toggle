@@ -2,6 +2,7 @@
 
 // Primary
 $primary: linear-gradient(hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+$primary-2: linear-gradient(to right, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
 
 // Neutral
 
@@ -17,5 +18,5 @@ $neutral-4: $dark-grayish-blue;
 
 // Typography 
 
-$base-text-size: 15px;
+$base-text: 15px;
 $bold-weight: 700;

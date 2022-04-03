@@ -4,4 +4,180 @@
 
 body {
   font-family: 'Montserrat', sans-serif;
+  // background: $primary;
+  background-image: url(/dist/images/bg-top.svg);
+  background-repeat: no-repeat;
+  background-position: 12em -2em;
+  font-size: $base-text;
+}
+
+header {
+  margin-top: 4.5em;
+  margin-bottom: 4em;
+
+  h1 {
+    text-align: center;
+    font-size: 1.9rem;
+    color: $neutral-3;
+    margin-bottom: 1.4em;
+    font-weight: 600;
+  }
+
+  .toggle-pricing {
+    color: $neutral-2;
+    // text-align: center;
+    font-size: 1rem;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5em;
+  }
+  // The switch - the box around the slider
+  .switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+
+    // Hide default HTML checkbox
+    input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+
+    // Slider
+    .slider {
+      position: absolute;
+      cursor: pointer;
+      inset: 0;
+      background: $primary-2;
+      transition: 0.4s;
+    }
+
+    .slider::before {
+      position: absolute;
+      content: '';
+      height: 26px;
+      width: 26px;
+      left: 4px;
+      bottom: 4px;
+      background-color: #fff;
+      transition: .4s;
+    }
+
+    // input:checked + .slider {
+    //   // background-color: #2196F3;
+    //   // border-radius: 10%;
+    // }
+
+    // input:focus + .slider {
+    //   // box-shadow: 0 0 1px #219F63;
+    // }
+
+    input:checked + .slider:before {
+      transform: translateX(26px);
+    }
+
+    .slider.round {
+      border-radius: 34px;
+    }
+
+    .slider.round:before {
+      border-radius: 50%;
+    }
+  }
+}
+
+.card {
+  background-color: #fff;
+  box-shadow: 0 0.6em 0.8em 0.4em #a3a8f047;
+  border-radius: 0.6em;
+  margin: 2em 1.75em;
+  padding: 2em 1.9em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  h2 {
+    color: $neutral-3;
+    font-weight: 600;
+    font-size: 1.2rem;
+    margin-bottom: 1.2em;
+  }
+
+  strong {
+    display: flex;
+    align-items: center;
+    gap: 0.35em;
+    margin-bottom: 1em;
+    color: $neutral-4;
+  }
+
+  .dollar-sign {
+    font-size: 2.4rem;
+  }
+
+  .price {
+    font-size: 4.4rem;
+    // font-weight: $bold-weight;
+  }
+
+  ul {
+    width: 100%;
+    text-align: center;
+    color: $neutral-3;
+    font-weight: 600;
+    margin-bottom: 1.4em;
+
+    hr {
+      border: 0.01em solid $neutral-2;
+      opacity: 0.4;
+    }
+
+    li {
+      // border-top: thin solid $neutral-2;
+      // border-bottom: thin solid $neutral-2;
+      margin: 1.15em 0;    
+    }
+  }
+
+  a {
+    width: 100%;
+  }
+  
+  button {
+    width: 100%;
+    color: $neutral-1;
+    background: $primary-2;
+    border: none;
+    border-radius: 0.5em;
+    padding: 1em 0em;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    font-size: 0.8rem;
+    font-family: 'Montserrat', sans-serif;
+    cursor: pointer;
+  }
+}
+
+.alt-colour {
+  background: $primary;
+
+  h2, strong, ul {
+    color: $neutral-1;
+  }
+
+  ul {
+    hr {
+      border-color: $neutral-1
+    }
+  }
+
+  button {
+    color: hsl(237, 63%, 64%);
+    background: $neutral-1;
+  }
 }
