@@ -4,7 +4,6 @@
 
 body {
   font-family: 'Montserrat', sans-serif;
-  // background: $primary;
   background-image: url(/dist/images/bg-top.svg);
   background-repeat: no-repeat;
   background-position: 12em -2em;
@@ -25,7 +24,6 @@ header {
 
   .toggle-pricing {
     color: $neutral-2;
-    // text-align: center;
     font-size: 1rem;
     font-weight: 600;
     display: flex;
@@ -66,15 +64,6 @@ header {
       background-color: #fff;
       transition: .4s;
     }
-
-    // input:checked + .slider {
-    //   // background-color: #2196F3;
-    //   // border-radius: 10%;
-    // }
-
-    // input:focus + .slider {
-    //   // box-shadow: 0 0 1px #219F63;
-    // }
 
     input:checked + .slider:before {
       transform: translateX(26px);
@@ -122,7 +111,6 @@ header {
 
   .price {
     font-size: 4.4rem;
-    // font-weight: $bold-weight;
   }
 
   ul {
@@ -177,5 +165,61 @@ header {
   button {
     color: hsl(237, 63%, 64%);
     background: $neutral-1;
+  }
+}
+
+@media (min-width: 900px) {
+  body {
+    display: grid;
+    grid-template-columns: 1fr repeat(3, 3fr) 1fr;grid-template-rows: 1.5fr 0.145fr 3fr 0.145fr 1fr;
+  }
+
+  header {
+    grid-column: 3 / 4;
+    margin-bottom: 0;
+  }
+
+  .card {
+    margin: 0;
+  }
+
+  .card:nth-of-type(1) {
+    grid-column: 2 / 3;
+    grid-row: 3 / 4;
+  }
+
+  .card:nth-of-type(2) {
+    grid-column: 3 / 4;
+    grid-row: 2 / 5;
+    // transform: scaleY(1.2);
+  }
+
+  .card:nth-of-type(3) {
+    grid-column: 4 / 5;
+    grid-row: 3 / 4;
+  }
+
+  .card {
+    a {
+      button:hover {
+        background: transparent;
+        color: hsl(237, 63%, 64%);
+        outline: 0.08em solid $neutral-4; 
+      }
+    }
+  }
+
+  .alt-colour {
+    a {
+      button:hover {
+        background: transparent;
+        color: $neutral-1;
+        outline: 0.08em solid $neutral-1;
+      }
+    }
+  }
+
+  .switch:hover {
+    opacity: 0.5;
   }
 }
