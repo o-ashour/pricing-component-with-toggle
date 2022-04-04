@@ -238,10 +238,11 @@ header .switch .slider.round:before {
   body {
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: 1fr (3fr)[3] 1fr;
-        grid-template-columns: 1fr repeat(3, 3fr) 1fr;
+    -ms-grid-columns: 1.5fr (3fr)[3] 1.5fr;
+        grid-template-columns: 1.5fr repeat(3, 3fr) 1.5fr;
     -ms-grid-rows: 1.5fr 0.145fr 3fr 0.145fr 1fr;
         grid-template-rows: 1.5fr 0.145fr 3fr 0.145fr 1fr;
+    background: url(/dist/images/bg-bottom.svg) left bottom no-repeat, url(/dist/images/bg-top.svg) right top no-repeat;
   }
   header {
     -ms-grid-column: 3;
@@ -276,17 +277,24 @@ header .switch .slider.round:before {
     -ms-grid-row-span: 1;
     grid-row: 3 / 4;
   }
-  .card a button:hover {
+  .card a button:focus {
+    border: 3px dashed red;
+  }
+  .card a button:hover, .card a button:focus {
     background: transparent;
     color: #696fdd;
     outline: 0.08em solid #494c5f;
   }
-  .alt-colour a button:hover {
+  .alt-colour a button:hover, .alt-colour a button:focus {
     background: transparent;
     color: #f6f6fe;
     outline: 0.08em solid #f6f6fe;
   }
   .switch:hover {
+    opacity: 0.5;
+  }
+  .switch input:focus + .slider {
+    border: 1px dashed red;
     opacity: 0.5;
   }
 }

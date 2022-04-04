@@ -2,6 +2,10 @@
 @import 'config';
 @import 'resets';
 
+*:focus {
+  // outline: 3px dashed red;
+}
+
 body {
   font-family: 'Montserrat', sans-serif;
   background-image: url(/dist/images/bg-top.svg);
@@ -40,9 +44,11 @@ header {
 
     // Hide default HTML checkbox
     input {
+      // position: absolute;
       opacity: 0;
       width: 0;
       height: 0;
+      // z-index: 5;
     }
 
     // Slider
@@ -171,7 +177,9 @@ header {
 @media (min-width: 900px) {
   body {
     display: grid;
-    grid-template-columns: 1fr repeat(3, 3fr) 1fr;grid-template-rows: 1.5fr 0.145fr 3fr 0.145fr 1fr;
+    grid-template-columns: 1.5fr repeat(3, 3fr) 1.5fr;
+    grid-template-rows: 1.5fr 0.145fr 3fr 0.145fr 1fr;
+    background: url(/dist/images/bg-bottom.svg) left bottom no-repeat, url(/dist/images/bg-top.svg) right top no-repeat;
   }
 
   header {
@@ -201,7 +209,11 @@ header {
 
   .card {
     a {
-      button:hover {
+      button:focus {
+        border: 3px dashed red;
+      }
+
+      button:hover, button:focus {
         background: transparent;
         color: hsl(237, 63%, 64%);
         outline: 0.08em solid $neutral-4; 
@@ -211,7 +223,7 @@ header {
 
   .alt-colour {
     a {
-      button:hover {
+      button:hover, button:focus {
         background: transparent;
         color: $neutral-1;
         outline: 0.08em solid $neutral-1;
@@ -221,5 +233,12 @@ header {
 
   .switch:hover {
     opacity: 0.5;
+  }
+
+  .switch {
+    input:focus + .slider {
+      border: 1px dashed red;
+      opacity: 0.5;
+    } 
   }
 }

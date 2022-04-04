@@ -6,6 +6,13 @@ const annualArr = ['199.99', '249.99', '399.99'];
 
 priceChkBoxEL.checked = true;
 toggleEL.addEventListener('click', priceSwitch);
+priceChkBoxEL.addEventListener('keydown', e => {
+  if (document.activeElement === priceChkBoxEL && e.code === 'Space') {
+    console.log('something happened');
+    priceSwitch();
+  };
+});
+
 
 function priceSwitch() {
   if (!priceChkBoxEL.checked) {
