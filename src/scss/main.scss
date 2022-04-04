@@ -2,10 +2,6 @@
 @import 'config';
 @import 'resets';
 
-// *:focus {
-//   border: 3px dashed red;
-// }
-
 body {
   font-family: 'Montserrat', sans-serif;
   background-image: url(/dist/images/bg-top.svg);
@@ -44,11 +40,9 @@ header {
 
     // Hide default HTML checkbox
     input {
-      // position: absolute;
       opacity: 0;
       width: 0;
       height: 0;
-      // z-index: 5;
     }
 
     // Slider
@@ -76,7 +70,7 @@ header {
     }
 
     input:focus + .slider {
-      outline: 3px dashed black;
+      outline: 3px dashed $neutral-4;
       opacity: 0.5;
     } 
 
@@ -149,7 +143,7 @@ header {
     width: 100%;
 
     button:focus {
-      outline: 3px dashed $neutral-3;
+      outline: 3px dashed $neutral-4;
     }
 
     button:hover, button:focus {
@@ -172,18 +166,6 @@ header {
     font-family: 'Montserrat', sans-serif;
     cursor: pointer;
   }
-
-  // a {
-  //   button:focus {
-  //     border: 3px dashed red;
-  //   }
-
-  //   button:hover, button:focus {
-  //     background: transparent;
-  //     color: hsl(237, 63%, 64%);
-  //     outline: 0.08em solid $neutral-4; 
-  //   }
-  // }
 }
 
 .alt-colour {
@@ -238,46 +220,10 @@ header {
   .card:nth-of-type(2) {
     grid-column: 3 / 4;
     grid-row: 2 / 5;
-    // transform: scaleY(1.2);
   }
 
   .card:nth-of-type(3) {
     grid-column: 4 / 5;
     grid-row: 3 / 4;
   }
-
-  // .card {
-  //   a {
-  //     button:focus {
-  //       border: 3px dashed red;
-  //     }
-
-  //     button:hover, button:focus {
-  //       background: transparent;
-  //       color: hsl(237, 63%, 64%);
-  //       outline: 0.08em solid $neutral-4; 
-  //     }
-  //   }
-  // }
-
-  // .alt-colour {
-  //   a {
-  //     button:hover, button:focus {
-  //       background: transparent;
-  //       color: $neutral-1;
-  //       outline: 0.08em solid $neutral-1;
-  //     }
-  //   }
-  // }
-
-  // .switch:hover {
-  //   opacity: 0.5;
-  // }
-
-  // .switch {
-  //   input:focus + .slider {
-  //     border: 1px dashed red;
-  //     opacity: 0.5;
-  //   } 
-  // }
 }

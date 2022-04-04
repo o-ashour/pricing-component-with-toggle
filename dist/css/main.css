@@ -124,7 +124,7 @@ header .switch input:checked + .slider:before {
 }
 
 header .switch input:focus + .slider {
-  outline: 3px dashed black;
+  outline: 3px dashed #494c5f;
   opacity: 0.5;
 }
 
@@ -211,7 +211,7 @@ header .switch:hover {
 }
 
 .card a button:focus {
-  outline: 3px dashed #6d708d;
+  outline: 3px dashed #494c5f;
 }
 
 .card a button:hover, .card a button:focus {
