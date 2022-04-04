@@ -2,9 +2,9 @@
 @import 'config';
 @import 'resets';
 
-*:focus {
-  // outline: 3px dashed red;
-}
+// *:focus {
+//   border: 3px dashed red;
+// }
 
 body {
   font-family: 'Montserrat', sans-serif;
@@ -75,6 +75,11 @@ header {
       transform: translateX(26px);
     }
 
+    input:focus + .slider {
+      outline: 3px dashed black;
+      opacity: 0.5;
+    } 
+
     .slider.round {
       border-radius: 34px;
     }
@@ -82,6 +87,10 @@ header {
     .slider.round:before {
       border-radius: 50%;
     }
+  }
+
+  .switch:hover {
+    opacity: 0.5;
   }
 }
 
@@ -138,6 +147,16 @@ header {
 
   a {
     width: 100%;
+
+    button:focus {
+      outline: 3px dashed $neutral-3;
+    }
+
+    button:hover, button:focus {
+      background: transparent;
+      color: hsl(237, 63%, 64%);
+      border: 0.08em solid $neutral-4; 
+    }
   }
   
   button {
@@ -153,6 +172,18 @@ header {
     font-family: 'Montserrat', sans-serif;
     cursor: pointer;
   }
+
+  // a {
+  //   button:focus {
+  //     border: 3px dashed red;
+  //   }
+
+  //   button:hover, button:focus {
+  //     background: transparent;
+  //     color: hsl(237, 63%, 64%);
+  //     outline: 0.08em solid $neutral-4; 
+  //   }
+  // }
 }
 
 .alt-colour {
@@ -171,6 +202,14 @@ header {
   button {
     color: hsl(237, 63%, 64%);
     background: $neutral-1;
+  }
+
+  a {
+    button:hover, button:focus {
+      background: transparent;
+      color: $neutral-1;
+      border: 0.08em solid $neutral-1;
+    }
   }
 }
 
@@ -207,38 +246,38 @@ header {
     grid-row: 3 / 4;
   }
 
-  .card {
-    a {
-      button:focus {
-        border: 3px dashed red;
-      }
+  // .card {
+  //   a {
+  //     button:focus {
+  //       border: 3px dashed red;
+  //     }
 
-      button:hover, button:focus {
-        background: transparent;
-        color: hsl(237, 63%, 64%);
-        outline: 0.08em solid $neutral-4; 
-      }
-    }
-  }
+  //     button:hover, button:focus {
+  //       background: transparent;
+  //       color: hsl(237, 63%, 64%);
+  //       outline: 0.08em solid $neutral-4; 
+  //     }
+  //   }
+  // }
 
-  .alt-colour {
-    a {
-      button:hover, button:focus {
-        background: transparent;
-        color: $neutral-1;
-        outline: 0.08em solid $neutral-1;
-      }
-    }
-  }
+  // .alt-colour {
+  //   a {
+  //     button:hover, button:focus {
+  //       background: transparent;
+  //       color: $neutral-1;
+  //       outline: 0.08em solid $neutral-1;
+  //     }
+  //   }
+  // }
 
-  .switch:hover {
-    opacity: 0.5;
-  }
+  // .switch:hover {
+  //   opacity: 0.5;
+  // }
 
-  .switch {
-    input:focus + .slider {
-      border: 1px dashed red;
-      opacity: 0.5;
-    } 
-  }
+  // .switch {
+  //   input:focus + .slider {
+  //     border: 1px dashed red;
+  //     opacity: 0.5;
+  //   } 
+  // }
 }

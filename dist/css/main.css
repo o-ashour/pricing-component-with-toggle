@@ -123,12 +123,21 @@ header .switch input:checked + .slider:before {
           transform: translateX(26px);
 }
 
+header .switch input:focus + .slider {
+  outline: 3px dashed black;
+  opacity: 0.5;
+}
+
 header .switch .slider.round {
   border-radius: 34px;
 }
 
 header .switch .slider.round:before {
   border-radius: 50%;
+}
+
+header .switch:hover {
+  opacity: 0.5;
 }
 
 .card {
@@ -201,6 +210,16 @@ header .switch .slider.round:before {
   width: 100%;
 }
 
+.card a button:focus {
+  outline: 3px dashed #6d708d;
+}
+
+.card a button:hover, .card a button:focus {
+  background: transparent;
+  color: #696fdd;
+  border: 0.08em solid #494c5f;
+}
+
 .card button {
   width: 100%;
   color: #f6f6fe;
@@ -232,6 +251,12 @@ header .switch .slider.round:before {
 .alt-colour button {
   color: #696fdd;
   background: #f6f6fe;
+}
+
+.alt-colour a button:hover, .alt-colour a button:focus {
+  background: transparent;
+  color: #f6f6fe;
+  border: 0.08em solid #f6f6fe;
 }
 
 @media (min-width: 900px) {
@@ -276,25 +301,5 @@ header .switch .slider.round:before {
     -ms-grid-row: 3;
     -ms-grid-row-span: 1;
     grid-row: 3 / 4;
-  }
-  .card a button:focus {
-    border: 3px dashed red;
-  }
-  .card a button:hover, .card a button:focus {
-    background: transparent;
-    color: #696fdd;
-    outline: 0.08em solid #494c5f;
-  }
-  .alt-colour a button:hover, .alt-colour a button:focus {
-    background: transparent;
-    color: #f6f6fe;
-    outline: 0.08em solid #f6f6fe;
-  }
-  .switch:hover {
-    opacity: 0.5;
-  }
-  .switch input:focus + .slider {
-    border: 1px dashed red;
-    opacity: 0.5;
   }
 }
